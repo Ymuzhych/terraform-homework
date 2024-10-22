@@ -5,7 +5,7 @@
 - **Key Pair Name**: ""
 - **Availability Zone**: ""
 - **Instance Type**: ""
-- **AMI ID**: ""
+- **Ami id**: ""
 - **Instance Count**: ""
 - **Open Ports**: ""
 
@@ -15,7 +15,7 @@
 - **Key Pair Name**: ""
 - **Availability Zone**: ""
 - **Instance Type**: ""
-- **AMI ID**: ""
+- **Ami id**: ""
 - **Instance Count**: ""
 - **Open Ports**: ""
 
@@ -24,7 +24,7 @@
 - **Key Pair Name**: ""
 - **Availability Zone**: ""
 - **Instance Type**: ""
-- **AMI ID**: ""
+- **Ami id**: ""
 - **Instance Count**: ""
 - **Open Ports**: ""
 
@@ -33,6 +33,6 @@
 - **Key Pair Name**: ""
 - **Availability Zone**: ""
 - **Instance Type**: ""
-- **AMI ID**: ""
+- **Ami id**: ""
 - **Instance Count**: ""
 - **Open Ports**: ""
