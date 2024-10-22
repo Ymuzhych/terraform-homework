@@ -19,6 +19,15 @@
 - **Instance Count**: ""
 - **Open Ports**: ""
 
+### Region 4: N.California (us-west-1)
+- **Region**: ""
+- **Key Pair Name**: ""
+- **Availability Zone**: ""
+- **Instance Type**: ""
+- **Ami id**: ""
+- **Instance Count**: ""
+- **Open Ports**: ""
+
 ### Region 3: Oregon (us-west-2)
 - **Region**: ""
 - **Key Pair Name**: ""
@@ -28,11 +37,3 @@
 - **Instance Count**: ""
 - **Open Ports**: ""
 
-### Region 4: N.California (us-west-1)
-- **Region**: ""
-- **Key Pair Name**: ""
-- **Availability Zone**: ""
-- **Instance Type**: ""
-- **Ami id**: ""
-- **Instance Count**: ""
-- **Open Ports**: ""
