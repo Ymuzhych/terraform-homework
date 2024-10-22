@@ -1,5 +1,5 @@
-resource "aws_key_pair" "tfhomework" {
-  key_name   = "homeworktf"
+resource "aws_key_pair" "homework" {
+  key_name   = "homework"
   public_key = file("~/.ssh/id_rsa.pub")
 }
   data "aws_ami" "linux2" {
@@ -17,39 +17,15 @@ resource "aws_key_pair" "tfhomework" {
 
   owners = ["137112412989"]
   }
-resource "aws_instance" "instance1" {
-  ami = data.aws_ami.linux2.id
-  instance_type = "t2.micro"
-  key_name = aws_key_pair.tfhomework.key_name
-  availability_zone = "us-east-2a"
+resource "aws_instance" "web" {
+  count                  = 3
+  ami                    = data.aws_ami.linux2.id
+  instance_type          = "t2.micro"
+  availability_zone      = var.zones[count.index]
+  key_name               = aws_key_pair.homework.key_name
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
-  user_data = file("apache.sh")
-  
-tags = {
-  Name = "web1"
-  }
-}
-resource "aws_instance" "instance2" {
-  ami = data.aws_ami.linux2.id
-  instance_type = "t2.micro"
-  key_name = aws_key_pair.tfhomework.key_name
-  availability_zone = "us-east-2b"
-  vpc_security_group_ids = [aws_security_group.allow_tls.id]
-  user_data = file("apache.sh")
-  
+  user_data              = file("apache.sh")
   tags = {
-  Name = "web2"
-  }
-}
-
-resource "aws_instance" "instance3" {
-  ami = data.aws_ami.linux2.id
-  instance_type = "t2.micro"
-  key_name = aws_key_pair.tfhomework.key_name
-  availability_zone = "us-east-2c"
-  vpc_security_group_ids = [aws_security_group.allow_tls.id]
-  user_data = file("apache.sh")
-  tags = {
-  Name = "web3"
+    Name = var.name[count.index]
   }
 }
