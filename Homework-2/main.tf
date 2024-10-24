@@ -1,7 +1,6 @@
 resource "aws_key_pair" "homework" {
   key_name   = "homework"
-  #public_key = file("~/.ssh/id_rsa.pub")
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEqGRRmwKHkLhUTbkcE0lvaynbg8JB+Sy1Jx1Z00BlUfEZskrzsLMqn2z38mv2BMnT0avLVQn0SBe9/QsajfZXG5PnvkqKS62hRrCayHootJumfWuCvHIXE9HgCHgvaM49MLNX1nFS/mUj0K9x/h37BJJtRsl5xxHF9Bp+TRqvm8y9GPtxvUK7RzGsNxRuFEELbKIOnbRyt73uy7VviMV/8Jqm+4XtpdJ851fqvceaB1vnRpmiTnn09qUga42usM8INGp2zjTuweFHN4n5En+PRn+168x/5yiSdA61uWWzkJXRVJSfE3c21jL6mYkst8v8jvx54YN85Xt3jlIvvBJr3POby3Hroe8/zpacyV8toPiB8y9BI2LzpRnzUUqMOqOAWLRp+7rb2ib9FrgKdv0risDt/dQMILPOBnG3HH1ymDmsWEo2WaYQrc/bCtcCTtXsJHBBbuE/KxhrTO5O33ZNMwxvX5YPizUiCA9qHF1mngjEYjMadkstPjUsOA74qClzP5fSWLsxHZSxzmpoVnhAIHxqn+8lAfEB8nOQ+fLly3RtAKJFc1JaIDRoTCDjvyPCqgXSCUNHsXkbluuKIKPSEnLhrLHLdcOELWFUhvdwvqZMqs9k3N0WmvgNDgOjFlXskbNanDoYkRAzBnmdo7HxeqD7aNBDXiJjjoaqbCYamw== myuliia2018@gmail.com"
+  public_key = file("~/.ssh/id_rsa.pub")
 }
 resource "aws_s3_bucket" "bucket1" {
   bucket = "kaizen-yuliia"
